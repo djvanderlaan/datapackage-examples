@@ -1,0 +1,61 @@
+{
+  "name": "iris3",
+  "title": "Data package with the Iris dataset; categories stored as object.",
+  "resources": [
+    {
+      "name": "iris",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "path": "iris.csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "sepallength",
+            "type": "number"
+          },
+          {
+            "name": "sepalwidth",
+            "type": "number"
+          },
+          {
+            "name": "petallength",
+            "type": "number"
+          },
+          {
+            "name": "petalwidth",
+            "type": "number"
+          },
+          {
+            "name": "species",
+            "type": "integer",
+            "categories": {
+              "resource": "species-categories"
+            }
+          }
+        ]
+      },
+      "title": "Edgar Anderson's Iris Data",
+      "description": "This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris.  The species are _Iris setosa_, _versicolor_, and _virginica_."
+    },
+    {
+      "name": "species-categories",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "path": "species-categories.csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "value",
+            "type": "integer"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
